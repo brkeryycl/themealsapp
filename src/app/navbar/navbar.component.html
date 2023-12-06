@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+        <a href="#" class="navbar-brand">The Meals App</a>
+        <div class="cart">
+            <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">{{cartItems.length}}<span class="visually-hidden">items</span></span>
+            <div class="popup">
+                <div class="row checkout">
+                    <p *ngFor="let item of cartItems">
+                        {{ item.name }}
+                    </p>
+                    
+                </div>
+                <div class="row checkout">
+                    <span>
+                        <a class="btn btn-outline-danger" (click)="clearCart()">Clear Cart</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

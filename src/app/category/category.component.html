@@ -1,0 +1,39 @@
+<div class="col-md-3">
+  <div class="list-group">
+
+    <ul>
+      <a *ngFor="let item of apiData">
+        <li class="list-group-item list-group-item-action bg-primary text-light rounded" (click)="selectName(item.strCategory)">{{ item.strCategory }}
+        </li>
+
+
+      </a>
+    </ul>
+
+  </div>
+</div>
+
+<div class="col-md-8">
+
+  <div class="container">
+    <hr />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let item of cardData">
+        <div class="card">
+          <img src="{{item.strMealThumb}}" class="card-img-top" alt="...">
+          <div class="card-body px-3 pt-2">
+
+
+            <h5 class="card-title">{{item.strMeal}}</h5>
+
+            <div class="d-flex justify-content-end">
+              <a href="#" class="btn btn-outline-primary" (click)="selectProduct(item.strMeal)">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
